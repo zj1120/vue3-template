@@ -1,0 +1,1588 @@
+@import '../../../figma-token/figma-output/blue.css';
+@import '../../../figma-token/figma-output/standard.css';
+@import '../../../figma-token/figma-output/red.css';
+@import '../../../figma-token/figma-output/global.css';
+/* @import '/figma-output/blue.css';
+@import '/figma-output/standard.css';
+@import '/figma-output/red.css'; */
+
+/* 按钮 */
+.el-button,
+.el-button.is-round {
+  @apply tr-regular-14px py-1 px-4;
+}
+.el-button--large,
+.el-button--large.is-round {
+  @apply tr-regular-16px py-[7px] px-5;
+}
+.el-button--medium,
+.el-button--medium.is-round {
+  @apply tr-regular-14px py-[5px] px-4;
+}
+.el-button--small,
+.el-button--small.is-round {
+  @apply tr-regular-14px py-0.5 px-3;
+}
+.el-button--mini,
+.el-button--mini.is-round {
+  @apply tr-regular-12px py-px px-2;
+}
+.el-button--small,
+.el-button--mini {
+  @apply rounded-tr-radius-s;
+}
+.el-button.is-circle {
+  @apply leading-none;
+}
+/* 按钮禁用样式 */
+.el-button.is-disabled,
+.el-button.is-disabled:active,
+.el-button.is-disabled:focus,
+.el-button.is-disabled:hover {
+  @apply bg-tr-color-bg-disable text-tr-color-text-disable border-tr-color-bg-disable;
+}
+.el-button.is-plain.is-disabled,
+.el-button.is-plain.is-disabled:active,
+.el-button.is-plain.is-disabled:focus,
+.el-button.is-plain.is-disabled:hover {
+  @apply bg-tr-color-bg-disable text-tr-color-text-disable border-tr-color-bg-disable;
+}
+/* 默认按钮 */
+.el-button--default {
+  @apply text-tr-color-text-primary border-tr-color-border-container-dark bg-tr-color-bg-container;
+}
+.el-button--default:focus,
+.el-button--default:hover {
+  @apply bg-tr-color-primary-brand-light-light text-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+.el-button--default.is-plain {
+  @apply bg-tr-color-bg-button-normal border-tr-color-border-container-dark;
+}
+.el-button--default.is-plain:focus,
+.el-button--default.is-plain:hover {
+  @apply bg-tr-color-bg-container border-tr-color-primary-brand-light-default text-tr-color-primary-brand-light-default;
+}
+.el-button--default.is-plain:active {
+  @apply bg-tr-color-bg-container border-tr-color-primary-brand-light-default;
+}
+/* primary按钮 */
+.el-button--primary {
+  @apply text-white bg-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+.el-button--primary:focus,
+.el-button--primary:hover {
+  @apply text-white bg-tr-color-primary-brand-light-hover border-tr-color-primary-brand-light-hover;
+}
+.el-button--primary.is-active,
+.el-button--primary:active {
+  @apply text-white bg-tr-color-primary-brand-light-active border-tr-color-primary-brand-light-active;
+}
+/* plain primary按钮 */
+.el-button--primary.is-plain {
+  @apply bg-transparent border-solid border-tr-color-primary-brand-light-default text-tr-color-primary-brand-light-default;
+}
+.el-button--primary.is-plain:focus,
+.el-button--primary.is-plain:hover {
+  @apply bg-tr-color-primary-brand-light-light text-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+.el-button--primary.is-plain:active {
+  @apply bg-tr-color-primary-brand-light-light text-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+/* danger按钮 */
+.el-button--danger {
+  @apply bg-tr-color-error-default border-tr-color-error-default;
+}
+.el-button--danger:focus,
+.el-button--danger:hover {
+  @apply bg-tr-color-error-hover border-tr-color-error-hover;
+}
+.el-button--danger.is-active,
+.el-button--danger:active {
+  @apply bg-tr-color-error-active border-tr-color-error-active;
+}
+/* plain danger按钮 */
+.el-button--danger.is-plain {
+  @apply bg-transparent border-solid border-tr-color-error-default text-tr-color-error-default;
+}
+.el-button--danger.is-plain:focus,
+.el-button--danger.is-plain:hover {
+  @apply bg-tr-color-error-light text-tr-color-error-default border-tr-color-error-default;
+}
+.el-button--danger.is-plain:active {
+  @apply bg-tr-color-error-light text-tr-color-error-default border-tr-color-error-default;
+}
+/* success按钮 */
+.el-button--success {
+  @apply bg-tr-color-success-default border-tr-color-success-default;
+}
+.el-button--success:focus,
+.el-button--success:hover {
+  @apply bg-tr-color-success-hover border-tr-color-success-hover;
+}
+.el-button--success.is-active,
+.el-button--success:active {
+  @apply bg-tr-color-success-active border-tr-color-success-active;
+}
+/* plain success按钮 */
+.el-button--success.is-plain {
+  @apply bg-transparent border-solid border-tr-color-success-default text-tr-color-success-default;
+}
+.el-button--success.is-plain:focus,
+.el-button--success.is-plain:hover {
+  @apply bg-tr-color-success-light text-tr-color-success-default border-tr-color-success-default;
+}
+.el-button--success.is-plain:active {
+  @apply bg-tr-color-success-light text-tr-color-success-default border-tr-color-success-default;
+}
+/* 暗黑按钮 */
+.el-button--dark {
+  @apply bg-tr-color-primary-brand-dark-default border-tr-color-primary-brand-dark-default text-white;
+}
+.el-button--dark:focus,
+.el-button--dark:hover {
+  @apply bg-tr-color-primary-brand-dark-hover text-white border-tr-color-primary-brand-dark-hover;
+}
+.el-button--dark.is-active,
+.el-button--dark:active {
+  @apply bg-tr-color-primary-brand-dark-active border-tr-color-primary-brand-dark-active;
+}
+.el-button--dark.is-plain {
+  @apply bg-transparent border-tr-color-primary-brand-dark-default text-tr-color-primary-brand-dark-default;
+}
+.el-button--dark.is-plain:focus,
+.el-button--dark.is-plain:hover {
+  @apply bg-tr-color-primary-brand-dark-light text-tr-color-primary-brand-dark-default border-tr-color-primary-brand-dark-hover;
+}
+.el-button--dark.is-plain.is-active,
+.el-button--dark.is-plain:active {
+  @apply bg-tr-color-primary-brand-dark-light border-tr-color-primary-brand-dark-active;
+}
+
+/* 文字按钮 */
+.el-button--text,
+.el-button--text-info,
+.el-button--text-error,
+.el-button--text-success {
+  @apply relative bg-transparent border-none px-0 py-1 text-tr-color-primary-brand-light-default;
+}
+.el-button--text:hover,
+.el-button--text-info:hover,
+.el-button--text-error:hover,
+.el-button--text-success:hover,
+.el-button--text:focus,
+.el-button--text-info:focus,
+.el-button--text-error:focus,
+.el-button--text-success:focus {
+  @apply bg-transparent;
+}
+.el-button--text::after,
+.el-button--text-info::after,
+.el-button--text-error::after,
+.el-button--text-success::after {
+  content: '';
+}
+.el-button--text::after,
+.el-button--text-info::after,
+.el-button--text-error::after,
+.el-button--text-success::after {
+  @apply absolute bottom-0 left-0 w-full h-px;
+}
+.el-button--text:focus,
+.el-button--text:hover {
+  @apply text-tr-color-primary-brand-light-hover;
+}
+.el-button--text:focus::after,
+.el-button--text:hover::after {
+  @apply bg-tr-color-primary-brand-light-hover;
+}
+.el-button--text:active {
+  @apply text-tr-color-primary-brand-light-active;
+}
+.el-button--text:active::after {
+  @apply bg-tr-color-primary-brand-light-active;
+}
+.el-button.is-disabled.el-button--text,
+.el-button.is-disabled.el-button--text-info,
+.el-button.is-disabled.el-button--text-error,
+.el-button.is-disabled.el-button--text-success {
+  @apply bg-transparent border-none no-underline;
+}
+.el-button.is-disabled.el-button--text::after,
+.el-button.is-disabled.el-button--text-info::after,
+.el-button.is-disabled.el-button--text-error::after,
+.el-button.is-disabled.el-button--text-success::after {
+  @apply bg-transparent;
+}
+.el-button--text-info {
+  @apply text-tr-color-text-primary;
+}
+.el-button--text-info:focus,
+.el-button--text-info:hover {
+  @apply text-tr-color-text-link-hover;
+}
+.el-button--text-info:focus::after,
+.el-button--text-info:hover::after {
+  @apply bg-tr-color-text-link-hover;
+}
+.el-button--text-info:active {
+  @apply text-tr-color-text-link-active;
+}
+.el-button--text-info:active::after {
+  @apply bg-tr-color-text-link-active;
+}
+.el-button--text-error {
+  @apply text-tr-color-error-default;
+}
+.el-button--text-error:focus,
+.el-button--text-error:hover {
+  @apply text-tr-color-error-hover;
+}
+.el-button--text-error:focus::after,
+.el-button--text-error:hover::after {
+  @apply bg-tr-color-error-hover;
+}
+.el-button--text-error:active {
+  @apply text-tr-color-error-active;
+}
+.el-button--text-error:active::after {
+  @apply bg-tr-color-error-active;
+}
+.el-button--text-success {
+  @apply text-tr-color-success-default;
+}
+.el-button--text-success:focus,
+.el-button--text-success:hover {
+  @apply text-tr-color-success-hover;
+}
+.el-button--text-success:focus::after,
+.el-button--text-success:hover::after {
+  @apply bg-tr-color-success-hover;
+}
+.el-button--text-success:active {
+  @apply text-tr-color-success-active;
+}
+.el-button--text-success:active::after {
+  @apply bg-tr-color-success-active;
+}
+/* 分割线 */
+.el-divider {
+  @apply bg-tr-color-border-divider;
+}
+.el-divider[type='light'] {
+  @apply bg-tr-color-border-light;
+}
+/* 导航 */
+.el-menu-item {
+  @apply text-tr-color-text-primary;
+}
+.el-menu-item:focus,
+.el-menu-item:hover {
+  @apply bg-tr-color-bg-button-normal text-tr-color-text-primary;
+}
+.el-menu-item.is-active {
+  @apply text-tr-color-primary-brand-light-default bg-tr-color-primary-brand-light-light;
+}
+.el-menu-item.is-disabled {
+  @apply text-tr-color-text-disable bg-tr-color-bg-container;
+}
+/* 下拉选框 */
+.el-dropdown-menu__item {
+  @apply tr-regular-14px py-[5px] text-tr-color-text-primary;
+}
+.el-dropdown-menu__item:focus,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  @apply bg-tr-color-bg-button-normal text-tr-color-text-primary;
+}
+.el-dropdown-menu__item.is-disabled {
+  @apply text-tr-color-text-disable;
+}
+/* 输入框 */
+.el-input__inner {
+  @apply border-tr-color-border-container-dark text-tr-color-text-primary pl-3;
+}
+.el-textarea__inner {
+  @apply pl-3;
+}
+.el-input--mini:not(.el-input--prefix) .el-input__inner {
+  @apply pl-2;
+}
+.el-input__inner:hover,
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus,
+.el-textarea__inner:hover,
+.el-textarea__inner:focus {
+  @apply border-tr-color-info-hover;
+}
+.el-input__inner:focus,
+.el-textarea__inner:focus {
+  @apply shadow-tr-shadows-focus-info;
+}
+.el-input--medium .el-input__inner {
+  @apply h-tr-height-l leading-tr-height-l;
+}
+.el-input--medium .el-input__icon {
+  @apply leading-tr-height-l;
+}
+.el-input__icon {
+  @apply text-tr-color-text-disable;
+}
+.el-input.is-disabled .el-input__inner {
+  @apply text-tr-color-text-disable border-tr-color-border-container-light bg-tr-color-bg-disable;
+}
+.el-input.readonly .el-input__inner {
+  @apply border-tr-color-border-container-light bg-tr-color-bg-disable cursor-default;
+}
+.el-input__inner,
+.el-input__icon {
+  @apply h-8 leading-8;
+}
+.el-input--large .el-input__inner,
+.el-input--large .el-input__icon {
+  @apply h-10 leading-10;
+}
+.el-dropdown .el-dropdown__caret-button::before{
+  @apply top-0 bottom-0;
+}
+.el-dropdown{
+  @apply tr-regular-14px;
+}
+.el-dropdown .el-icon-arrow-down:before {
+  content: "\e790";
+}
+.el-dropdown .el-button{
+  @apply px-3;
+}
+/* 输入框placeholder修改 */
+.el-input__inner::-ms-input-placeholder {
+  @apply tr-regular-14px text-tr-color-text-disable;
+}
+.el-input__inner::-moz-placeholder {
+  @apply tr-regular-14px text-tr-color-text-disable;
+}
+.el-input__inner::-webkit-input-placeholder {
+  @apply tr-regular-14px text-tr-color-text-disable;
+}
+.el-input__inner::placeholder {
+  @apply tr-regular-14px text-tr-color-text-disable;
+}
+.el-input--large .el-input__inner::-ms-input-placeholder {
+  @apply tr-regular-16px;
+}
+.el-input--large .el-input__inner::-moz-placeholder {
+  @apply tr-regular-16px;
+}
+.el-input--large .el-input__inner::-webkit-input-placeholder {
+  @apply tr-regular-16px;
+}
+.el-input--large .el-input__inner::placeholder {
+  @apply tr-regular-16px;
+}
+.el-input--mini .el-input__inner::-ms-input-placeholder {
+  @apply tr-regular-12px;
+}
+.el-input--mini .el-input__inner::-moz-placeholder {
+  @apply tr-regular-12px;
+}
+.el-input--mini .el-input__inner::-webkit-input-placeholder {
+  @apply tr-regular-12px;
+}
+.el-input--mini .el-input__inner::placeholder {
+  @apply tr-regular-12px;
+}
+/* 单选 */
+.el-radio__inner {
+  @apply border-tr-color-border-container-dark w-4 h-4;
+}
+.el-radio:hover .el-radio__inner {
+  @apply border-tr-color-primary-brand-light-default bg-tr-color-primary-brand-light-light;
+}
+.el-radio__input.is-checked .el-radio__inner {
+  @apply border-tr-color-primary-brand-light-default bg-tr-color-bg-container border-2;
+}
+.el-radio__label{
+  @apply pl-2;
+}
+.el-radio__label,
+.el-radio-button,
+.el-radio-button--medium,
+.el-radio-button--medium32 {
+  @apply tr-regular-14px;
+}
+.el-radio-button--small,
+.el-radio-button--mini {
+  @apply tr-regular-12px;
+}
+.el-radio__label,
+.el-radio__input.is-checked + .el-radio__label {
+  @apply text-tr-color-text-primary;
+}
+.el-radio.is-disabled .el-radio__label{
+ @apply text-tr-color-text-disable;
+}
+.el-radio__inner::after {
+  @apply bg-tr-color-primary-brand-light-default;
+}
+/* .el-radio__input.is-checked .el-radio__inner::after {
+  @apply w-2 h-2 transform -translate-x-[50%] -translate-y-[50%];
+} */
+.el-radio__input.is-checked .el-radio__inner::after {
+  @apply w-2 h-2;
+}
+.el-radio-button__inner {
+  @apply text-tr-color-text-primary py-2 leading-22 tr-regular-14px;
+}
+.el-radio-button__inner:hover {
+  @apply text-tr-color-text-primary;
+}
+.el-radio-button__orig-radio:checked + .el-radio-button__inner {
+  @apply text-tr-color-primary-brand-light-default bg-tr-color-bg-container border-tr-color-primary-brand-light-default;
+}
+.el-radio-button--medium .el-radio-button__inner {
+  @apply py-1.5 leading-20;
+}
+.el-radio-button--medium32 .el-radio-button__inner {
+  @apply py-[5px] leading-20 text-sm;
+}
+.el-radio-button--small .el-radio-button__inner {
+  @apply py-1 leading-[1.125rem];
+}
+.el-radio-button--mini .el-radio-button__inner {
+  @apply py-0.5 leading-[1.125rem];
+}
+.el-radio-button__orig-radio:disabled + .el-radio-button__inner {
+  @apply bg-tr-color-bg-disable text-tr-color-text-disable;
+}
+.el-radio__input.is-disabled .el-radio__inner, .el-radio__input.is-disabled.is-checked .el-radio__inner{
+  @apply bg-tr-color-bg-disable border-tr-color-border-container-dark;
+}
+.el-radio.is-bordered{
+  @apply pt-2 rounded-[20px];
+}
+/* 数字输入框 */
+.el-input-number__increase,
+.el-input-number__decrease {
+  @apply bg-tr-color-bg-container text-tr-color-text-icon1 border-tr-color-border-container-dark;
+}
+.el-input-number.is-controls-right .el-input-number__decrease, .el-input-number.is-controls-right .el-input-number__increase {
+  @apply leading-4;
+}
+.el-input-number {
+  @apply leading-[30px];
+}
+.el-input-number--large {
+  @apply leading-[2.375rem];
+}
+.el-input-number--medium {
+  @apply leading-8;
+}
+.el-input-number--mini {
+  @apply leading-[1.625rem];
+}
+.el-input-number__decrease.is-disabled,
+.el-input-number__increase.is-disabled {
+  @apply bg-tr-color-bg-container text-tr-color-text-disable;
+}
+.el-input-number.is-disabled .el-input-number__decrease,
+.el-input-number.is-disabled .el-input-number__increase {
+  @apply bg-tr-color-bg-disable text-tr-color-text-disable border-tr-color-border-container-light;
+}
+.el-input-number__decrease:hover,
+.el-input-number__increase:hover {
+  @apply text-tr-color-primary-brand-light-default;
+}
+.el-input-number__decrease:hover:not(.is-disabled)
+  ~ .el-input
+  .el-input__inner:not(.is-disabled),
+.el-input-number__increase:hover:not(.is-disabled)
+  ~ .el-input
+  .el-input__inner:not(.is-disabled) {
+  @apply border-tr-color-border-container-dark;
+}
+.el-input-number__decrease.is-disabled,
+.el-input-number__increase.is-disabled,
+.el-input-number.is-disabled .el-input-number__decrease:hover,
+.el-input-number.is-disabled .el-input-number__increase:hover {
+  @apply text-tr-color-text-disable;
+}
+.el-input-number .el-input__inner {
+  @apply leading-8;
+}
+/* 复选框 */
+.el-checkbox__label {
+  @apply tr-regular-14px text-tr-color-text-primary pl-2 align-text-bottom;
+}
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  @apply text-tr-color-text-primary;
+}
+.el-checkbox__inner {
+  @apply border-tr-color-border-container-dark w-4 h-4;
+}
+.el-checkbox__inner::after {
+  @apply left-[5px] top-0.5;
+}
+.el-checkbox__input.is-indeterminate .el-checkbox__inner::before {
+  @apply top-1.5;
+}
+.el-checkbox__input.is-focus .el-checkbox__inner {
+  @apply border-tr-color-primary-brand-light-default;
+}
+.el-checkbox__inner:hover,
+.el-checkbox:hover .el-checkbox__inner {
+  @apply border-tr-color-primary-brand-light-default bg-tr-color-primary-brand-light-light;
+}
+.el-checkbox__input.is-disabled .el-checkbox__inner,
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner {
+  @apply bg-tr-color-bg-disable border-tr-color-border-container-dark;
+}
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after {
+  @apply border-tr-color-text-disable;
+}
+.el-checkbox__input.is-disabled + span.el-checkbox__label {
+  @apply text-tr-color-text-disable;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  @apply bg-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+.el-checkbox[type='dark'] .el-checkbox__input.is-focus .el-checkbox__inner {
+  @apply border-tr-color-primary-brand-dark-default;
+}
+.el-checkbox[type='dark'] .el-checkbox__inner:hover,
+.el-checkbox[type='dark']:hover .el-checkbox__inner {
+  @apply border-tr-color-primary-brand-dark-default bg-tr-color-primary-brand-light-light;
+}
+.el-checkbox[type='dark'] .el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox[type='dark']
+  .el-checkbox__input.is-indeterminate
+  .el-checkbox__inner {
+  @apply bg-tr-color-primary-brand-dark-default border-tr-color-primary-brand-dark-default;
+}
+/* 单选 */
+.el-radio-group {
+  @apply align-middle;
+}
+.el-switch {
+  @apply h-6 leading-6;
+}
+.el-switch__core {
+  @apply -bg--color-gray-400 -border--color-gray-400 h-6 rounded-[15px];
+}
+.el-switch__core .el-switch__action {
+  @apply top-[3px] left-[3px];
+}
+.el-switch.is-checked .el-switch__core .el-switch__action {
+  @apply -ml-[19px];
+}
+.el-switch.is-checked .el-switch__core {
+  @apply bg-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+.el-switch.is-disabled .el-switch__core,
+.el-switch.is-disabled .el-switch__label {
+  @apply bg-tr-color-bg-disable border-tr-color-bg-disable;
+}
+.el-switch.is-disabled.is-checked .el-switch__core,
+.el-switch.is-disabled.is-checked .el-switch__label {
+  @apply bg-tr-color-primary-brand-light-disable border-tr-color-primary-brand-light-disable;
+}
+.el-switch[type='dark'].is-checked .el-switch__core {
+  @apply bg-tr-color-primary-brand-dark-default border-tr-color-primary-brand-dark-default;
+}
+.el-switch[type='dark'].is-disabled .el-switch__core,
+.el-switch[type='dark'].is-disabled .el-switch__label {
+  @apply bg-tr-color-bg-disable border-tr-color-bg-disable;
+}
+.el-switch[type='dark'].is-disabled.is-checked .el-switch__core,
+.el-switch[type='dark'].is-disabled.is-checked .el-switch__label {
+  @apply bg-tr-color-primary-brand-dark-disable border-tr-color-primary-brand-dark-disable;
+}
+/* 方块switch */
+.el-switch[square] .el-switch__core {
+  @apply rounded-sm;
+}
+.el-switch[square] .el-switch__action {
+  @apply rounded-sm;
+}
+/* 滑块slider */
+.el-slider__runway {
+  @apply h-0.5 rounded-0.5 bg-tr-color-bg-disable;
+}
+.el-slider__bar {
+  @apply h-0.5 bg-tr-color-primary-brand-light-default;
+}
+.el-slider__button {
+  @apply w-3 h-3 border-tr-color-primary-brand-light-default box-border;
+}
+.el-slider__button-wrapper {
+  @apply w-[31px] h-[31px];
+}
+.el-slider__runway.disabled .el-slider__bar {
+  @apply bg-tr-color-border-container-light;
+}
+.el-slider__runway.disabled .el-slider__button {
+  @apply border-tr-color-border-container-light;
+}
+.el-slider__stop {
+  @apply bg-tr-color-bg-disable w-px rounded-0 bottom-0;
+}
+.el-slider__marks-stop {
+  @apply bg-white rounded-full w-2 h-2 border-solid border-tr-color-primary-brand-light-default box-border -top-[3px];
+}
+.el-slider.is-vertical .el-slider__runway {
+  @apply w-0.5;
+}
+.el-slider.is-vertical .el-slider__bar {
+  @apply w-0.5;
+}
+.el-slider.is-vertical .el-slider__button-wrapper {
+  @apply w-[31px] h-[31px];
+}
+.el-slider[type='dark'] .el-slider__bar {
+  @apply bg-tr-color-primary-brand-dark-default;
+}
+.el-slider[type='dark'] .el-slider__button {
+  @apply border-tr-color-primary-brand-dark-default;
+}
+.el-slider__marks-text{
+  @apply tr-regular-14px text-tr-color-text-secondary;
+}
+/* 标签页tabs */
+.el-tabs__item {
+  @apply text-tr-color-text-primary font-normal tr-regular-14px bg-transparent border-none;
+  @apply leading-10;
+}
+.el-tabs__item:hover,
+.el-tabs__item.is-active {
+  @apply text-tr-color-text-primary font-semibold;
+}
+.el-tabs__active-bar {
+  @apply bg-tr-color-primary-brand-light-default;
+}
+.el-tabs__nav-wrap::after {
+  @apply bg-tr-color-bg-disable;
+}
+.el-tabs--card > .el-tabs__header {
+  @apply border-tr-color-border-divider;
+}
+.el-tabs--card > .el-tabs__header .el-tabs__nav {
+  @apply border-none;
+}
+.el-tabs--card > .el-tabs__header .el-tabs__item {
+  @apply bg-tr-color-bg-thirdcontainer ml-1 border border-solid border-tr-color-border-container-light rounded-t-1;
+}
+.el-tabs--card > .el-tabs__header .el-tabs__item:first-child {
+  @apply ml-0;
+}
+.el-tabs--card > .el-tabs__header .el-tabs__item {
+  @apply border-b border-tr-color-border-container-light;
+}
+.el-tabs--card > .el-tabs__header .el-tabs__item:first-child {
+  @apply border border-solid border-tr-color-border-container-light;
+}
+.el-tabs--card > .el-tabs__header .el-tabs__item.is-active {
+  @apply bg-tr-color-bg-container text-tr-color-primary-brand-light-default border-b-0 font-normal;
+}
+.big-font-size .el-tabs__item{
+  @apply tr-regular-16px;
+  @apply leading-10;
+}
+.small-font-size .el-tabs__item{
+  @apply tr-regular-12px;
+  @apply leading-10;
+}
+
+.small-card-height .el-tabs__item{
+  @apply h-8 leading-8;
+}
+
+.medium-card-height .el-tabs__item{
+  @apply h-[34px] leading-[34px];
+}
+/* 面包屑breadcrumb */
+.el-breadcrumb__item {
+  @apply tr-regular-14px;
+}
+.el-breadcrumb__inner {
+  @apply text-tr-color-text-secondary;
+}
+.el-breadcrumb__item:last-child .el-breadcrumb__inner,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner a,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner a:hover,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner:hover {
+  @apply text-tr-color-text-primary;
+}
+.el-breadcrumb__inner a,
+.el-breadcrumb__inner.is-link {
+  @apply text-tr-color-text-secondary font-normal;
+}
+.el-breadcrumb__separator {
+  @apply text-tr-color-text-secondary font-normal;
+}
+.el-breadcrumb__inner a:hover,
+.el-breadcrumb__inner.is-link:hover {
+  @apply text-tr-color-primary-brand-light-default;
+}
+/* 步骤条steps */
+.el-step__title,
+.el-step__title.is-finish,
+.el-step__title.is-wait,
+.el-step.is-vertical .el-step__title {
+  @apply tr-regular-16px text-tr-color-text-primary;
+}
+.el-step.is-horizontal .el-step__title,
+.el-step.is-horizontal .el-step__title.is-finish,
+.el-step.is-horizontal .el-step__title.is-wait {
+  @apply pb-2;
+}
+.el-step.is-simple .el-step__title {
+  @apply tr-regular-16px;
+}
+.el-step__description,
+.el-step__description.is-finish,
+.el-step__description.is-wait,
+.el-step__description.is-process {
+  @apply tr-regular-12px text-tr-color-text-secondary;
+}
+.el-step__head.is-finish,
+.el-step__head.is-process {
+  @apply text-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+.el-step__line {
+  @apply bg-tr-color-border-container-dark;
+}
+.el-step.is-horizontal .el-step__line {
+  @apply h-px;
+}
+.el-step__line-inner {
+  @apply hidden;
+}
+.el-step__head.is-finish .el-step__line {
+  @apply bg-tr-color-primary-brand-light-default;
+}
+.el-icon-dot {
+  @apply w-[25px] h-[25px];
+}
+.el-icon-dot::after {
+  content: '';
+}
+.el-icon-dot::after {
+  @apply absolute left-[50%] top-[50%] w-2 h-2 -ml-1 -mt-1 bg-tr-color-border-container-dark rounded-full;
+}
+.el-step__head.is-finish .el-icon-dot::after,
+.el-step__head.is-process .el-icon-dot::after {
+  @apply bg-tr-color-primary-brand-light-default;
+}
+.el-step__head.is-process .el-icon-dot::after {
+  @apply w-2.5 h-2.5;
+}
+.el-step.is-vertical .el-step__line {
+  @apply w-px;
+}
+.el-step.is-vertical .el-step__icon.is-icon {
+  @apply w-[23px];
+}
+.el-step__main{
+  @apply pl-4;
+}
+.el-step.is-vertical .el-step__title.is-process{
+  @apply tr-bold-16px;
+}
+.el-step.is-horizontal .el-step__title{
+  @apply text-tr-color-text-primary;
+}
+/* 树形结构tree */
+.el-tree {
+  @apply text-tr-color-text-primary;
+}
+.el-tree,
+.el-tree-node__expand-icon {
+  @apply text-tr-color-text-primary;
+}
+.el-tree-node__label {
+  @apply tr-regular-14px;
+}
+.el-tree-node__content:hover,
+.el-tree-node:focus > .el-tree-node__content,
+.el-tree-node.is-current > .el-tree-node__content {
+  @apply bg-tr-color-primary-brand-light-light;
+}
+/* 分页pagination */
+.el-pagination,
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li,
+.el-pagination__total,
+.el-pagination__jump {
+  @apply text-tr-color-text-primary font-normal text-sm leading-8;
+}
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+  @apply bg-tr-color-text-white-primary border border-solid border-tr-color-border-container-dark;
+}
+.el-pagination.is-background .btn-next:hover,
+.el-pagination.is-background .btn-prev:hover {
+  @apply border-tr-color-primary-brand-light-default text-tr-color-primary-brand-light-default;
+}
+.el-pagination.is-background .btn-next:active,
+.el-pagination.is-background .btn-prev:active {
+  @apply border-tr-color-primary-brand-light-pressed text-tr-color-primary-brand-light-pressed;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  @apply border-tr-color-primary-brand-light-default text-tr-color-primary-brand-light-default bg-tr-color-primary-brand-light-light;
+}
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  @apply text-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+.el-pagination.is-background .el-pager li:not(.disabled):active {
+  @apply border-tr-color-primary-brand-light-pressed bg-tr-color-primary-brand-light-light text-tr-color-primary-brand-light-pressed;
+}
+.el-pagination__sizes .el-input .el-input__inner:hover,
+.el-pagination__editor.el-input .el-input__inner:hover,
+.el-pagination__editor.el-input .el-input__inner:focus {
+  @apply border-tr-color-primary-brand-light-default;
+}
+.el-pagination__sizes .el-input .el-input__inner:active,
+.el-pagination__editor.el-input .el-input__inner:active {
+  @apply border-tr-color-primary-brand-light-pressed;
+}
+.el-pagination.is-background .btn-prev:disabled {
+  @apply text-tr-color-text-disable border-tr-color-border-container-light bg-tr-color-bg-disable;
+}
+.el-select-dropdown__item.selected {
+  @apply text-tr-color-primary-brand-light-default;
+}
+.el-pager li,
+.el-pagination .btn-next,
+.el-pagination .btn-prev {
+  @apply w-8 h-8 leading-8;
+}
+.el-pagination[size='small'] .el-pager li,
+.el-pagination[size='small'] .btn-next,
+.el-pagination[size='small'] .btn-prev {
+  @apply w-[30px] h-[30px] leading-[30px];
+}
+.el-pagination__editor.el-input,
+.el-pagination__editor.el-input .el-input__inner,
+.el-pagination .el-select .el-input .el-input__inner,
+.el-pagination span:not([class*='suffix']) {
+  @apply h-8 leading-8;
+}
+.el-pagination[size='small'] .el-pagination__editor.el-input,
+.el-pagination[size='small'] .el-pagination__editor.el-input .el-input__inner,
+.el-pagination[size='small']
+  .el-pagination
+  .el-select
+  .el-input
+  .el-input__inner,
+.el-pagination[size='small'] .el-pagination span:not([class*='suffix']) {
+  @apply h-[30px] leading-[30px];
+}
+.el-pagination[size='small'] button,
+.el-pagination[size='small'] span:not([class*='suffix']),
+.el-pagination[size='small'] .el-pagination__sizes .el-input .el-input__inner,
+.el-pagination[size='small'] .el-pager li {
+  @apply text-xs leading-[30px];
+}
+.el-pagination[type='dark'].is-background .btn-next:hover,
+.el-pagination[type='dark'].is-background .btn-prev:hover {
+  @apply border-tr-color-primary-brand-dark-default text-tr-color-primary-brand-dark-default;
+}
+.el-pagination[type='dark'].is-background .btn-next:active,
+.el-pagination[type='dark'].is-background .btn-prev:active {
+  @apply border-tr-color-primary-brand-dark-pressed text-tr-color-primary-brand-dark-pressed;
+}
+.el-pagination[type='dark'].is-background .el-pager li:not(.disabled).active {
+  @apply border-tr-color-primary-brand-dark-pressed text-tr-color-primary-brand-dark-pressed bg-tr-color-primary-brand-dark-light;
+}
+.el-pagination[type='dark'].is-background .el-pager li:not(.disabled):hover {
+  @apply text-tr-color-primary-brand-dark-default border-tr-color-primary-brand-dark-default;
+}
+.el-pagination[type='dark'].is-background .el-pager li:not(.disabled):active {
+  @apply border-tr-color-primary-brand-dark-pressed bg-tr-color-primary-brand-dark-light text-tr-color-primary-brand-dark-pressed;
+}
+.el-pagination[type='dark']
+  .el-pagination__sizes
+  .el-input
+  .el-input__inner:hover,
+.el-pagination[type='dark']
+  .el-pagination__editor.el-input
+  .el-input__inner:hover,
+.el-pagination[type='dark']
+  .el-pagination__editor.el-input
+  .el-input__inner:focus {
+  @apply border-tr-color-primary-brand-dark-default;
+}
+.el-pagination[type='dark']
+  .el-pagination__sizes
+  .el-input
+  .el-input__inner:active,
+.el-pagination[type='dark']
+  .el-pagination__editor.el-input
+  .el-input__inner:active {
+  @apply border-tr-color-primary-brand-dark-pressed;
+}
+.el-pagination[type='dark'].is-background .btn-prev:disabled {
+  @apply text-tr-color-text-disable border-tr-color-border-container-light bg-tr-color-bg-disable;
+}
+.el-pagination[type='dark'].el-select-dropdown__item.selected {
+  @apply text-tr-color-primary-brand-dark-default;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li{
+  @apply rounded;
+}
+/* 级联选择器cascader */
+.el-cascader-node__label {
+  @apply tr-regular-14px;
+}
+.el-cascader .el-input .el-input__inner:focus,
+.el-cascader .el-input .el-input__inner:hover,
+.el-cascader .el-input.is-focus .el-input__inner {
+  @apply border-tr-color-info-hover;
+}
+.el-cascader .el-input .el-input__inner:focus,
+.el-cascader .el-input.is-focus .el-input__inner {
+  @apply shadow-tr-shadows-focus-info;
+}
+.el-cascader-node.in-active-path,
+.el-cascader-node.is-active,
+.el-cascader-node.is-selectable.in-checked-path {
+  @apply text-tr-color-primary-brand-light-default bg-tr-color-bg-fourthcontainer;
+}
+.el-cascader-node.is-active {
+  @apply bg-tr-color-bg-container;
+}
+.el-cascader-menu {
+  @apply text-tr-color-text-primary;
+}
+.el-cascader-menu__list {
+  @apply mx-1.5;
+}
+.el-cascader-node {
+  @apply rounded;
+}
+.el-cascader-node:not(.is-disabled):focus,
+.el-cascader-node:not(.is-disabled):hover {
+  @apply bg-tr-color-bg-fourthcontainer;
+}
+.el-cascader-node:not(.is-disabled):active {
+  @apply bg-tr-color-bg-container text-tr-color-primary-brand-light-default;
+}
+.el-cascader-node.is-disabled {
+  @apply text-tr-color-text-disable;
+}
+.el-cascader__tags {
+  @apply ml-2;
+}
+.el-cascader__tags .el-tag {
+  @apply bg-tr-color-bg-fourthcontainer text-tr-color-text-primary rounded-0.5 pl-2 ml-1;
+}
+.el-cascader__tags .el-tag .el-icon-close {
+  @apply bg-transparent text-tr-color-text-disable;
+}
+.el-cascader__tags .el-tag>span {
+  @apply tr-regular-14px;
+}
+.el-cascader__dropdown.dark .el-cascader-node.in-active-path,
+.el-cascader__dropdown.dark .el-cascader-node.is-active,
+.el-cascader__dropdown.dark .el-cascader-node.is-selectable.in-checked-path {
+  @apply text-tr-color-primary-brand-dark-default;
+}
+.el-cascader__dropdown.dark .el-cascader-node:not(.is-disabled):active {
+  @apply text-tr-color-primary-brand-dark-default;
+}
+.el-cascader__dropdown.dark .el-checkbox__inner:hover,
+.el-cascader__dropdown.dark .el-checkbox:hover .el-checkbox__inner {
+  @apply border-tr-color-primary-brand-dark-default bg-tr-color-primary-brand-dark-light;
+}
+.el-cascader__dropdown.dark .el-checkbox__input.is-checked .el-checkbox__inner,
+.el-cascader__dropdown.dark
+  .el-checkbox__input.is-indeterminate
+  .el-checkbox__inner {
+  @apply bg-tr-color-primary-brand-dark-default border-tr-color-primary-brand-dark-default;
+}
+.el-cascader__dropdown.dark .el-checkbox__input.is-focus .el-checkbox__inner {
+  @apply border-tr-color-primary-brand-dark-default;
+}
+
+/* 进度条 */
+.el-progress-bar__inner {
+  @apply bg-tr-color-info-default;
+}
+.el-progress.is-exception .el-progress-bar__inner {
+  @apply bg-tr-color-error-default;
+}
+.el-progress.is-success .el-progress-bar__inner {
+  @apply bg-tr-color-success-default;
+}
+.el-progress-bar__outer{
+  @apply bg-tr-color-bg-fourthcontainer;
+}
+.el-progress.is-warning .el-progress-bar__inner{
+  @apply bg-tr-color-warning-default;
+}
+.el-progress__text{
+  @apply text-tr-color-text-secondary;
+  @apply tr-regular-14px !important;
+}
+.el-icon-circle-close:before{
+  content: "\e7a3";
+}
+
+/* 标记 */
+.el-badge__content {
+  @apply bg-tr-color-error-default;
+}
+.el-badge__content--primary {
+  @apply bg-tr-color-info-default;
+}
+.el-badge__content--warning {
+  @apply bg-tr-color-warning-default;
+}
+.el-badge__content--success {
+  @apply bg-tr-color-success-default;
+}
+.el-badge__content--info {
+  @apply bg-tr-color-bg-fourthcontainer text-tr-color-text-secondary;
+}
+/* 文字提示 */
+.el-tooltip__popper.is-light {
+  @apply rounded-tr-radius-s border-0;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+}
+.el-tooltip__popper.is-light[x-placement^='top'] .popper__arrow {
+  @apply border-t-tr-color-bg-container;
+}
+.el-tooltip__popper.is-light[x-placement^='bottom'] .popper__arrow {
+  @apply border-b-tr-color-bg-container;
+}
+.el-tooltip__popper.is-light[x-placement^='left'] .popper__arrow {
+  @apply border-l-tr-color-bg-container;
+}
+.el-tooltip__popper.is-light[x-placement^='right'] .popper__arrow {
+  @apply border-r-tr-color-bg-container;
+}
+
+/* 时间、日期选择器 */
+.el-year-table td .cell,
+.el-month-table td .cell,
+.el-date-picker__header-label {
+  @apply tr-regular-14px;
+}
+.el-date-picker__header-label,
+.el-date-range-picker__header div {
+  @apply font-semibold;
+}
+.el-date-range-picker__header {
+  @apply pb-2;
+}
+.el-picker-panel,
+.el-year-table td .cell,
+.el-date-picker__header-label,
+.el-picker-panel__icon-btn {
+  @apply text-tr-color-text-primary;
+}
+.el-date-table {
+  @apply text-sm;
+}
+.el-date-table td.available:hover {
+  @apply text-tr-color-text-primary;
+}
+.el-date-table td.available:hover span {
+  @apply bg-tr-color-bg-container-hover border-tr-color-bg-container-hover;
+}
+.el-date-table td.current:not(.disabled) span,
+.el-date-table td.available.end-date span,
+.el-date-table td.available.start-date span {
+  @apply bg-tr-color-primary-brand-light-default;
+}
+.el-date-table td.today span {
+  @apply text-tr-color-text-primary font-normal border border-solid border-tr-color-primary-brand-light-default box-border leading-22;
+}
+.el-date-table td.in-range div:hover {
+  @apply bg-tr-color-primary-brand-light-light;
+}
+.el-date-table td.in-range div {
+  @apply bg-tr-color-primary-brand-light-light;
+}
+.el-year-table td .cell,
+.el-month-table td .cell {
+  @apply h-6 leading-6 rounded-6 w-[3.75rem] border border-solid border-transparent;
+}
+.el-month-table td div {
+  @apply h-auto;
+}
+.el-year-table td.today .cell,
+.el-month-table td.today .cell {
+  @apply font-normal border border-solid border-tr-color-primary-brand-light-default text-tr-color-primary-brand-light-default;
+}
+.el-year-table td:not(.disabled) .cell:hover,
+.el-month-table td:not(.disabled) .cell:hover {
+  @apply bg-white bg-tr-color-bg-container-hover text-tr-color-text-primary border-tr-color-bg-container-hover;
+}
+.el-year-table td.current:not(.disabled) .cell,
+.el-month-table td.current:not(.disabled) .cell {
+  @apply text-white bg-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+.el-date-table td.disabled div {
+  @apply bg-tr-color-bg-disable text-tr-color-text-disable;
+}
+.el-date-picker__header-label.active,
+.el-date-picker__header-label:hover,
+.el-time-panel__btn.confirm,
+.el-picker-panel__icon-btn:hover {
+  @apply text-tr-color-primary-brand-light-default;
+}
+.el-time-spinner__item {
+  @apply text-tr-color-text-primary;
+}
+.el-time-spinner__item.active:not(.disabled) {
+  @apply bg-tr-color-primary-brand-light-light font-normal text-tr-color-text-primary;
+}
+.el-time-panel__content::after,
+.el-time-panel__content::before {
+  @apply hidden;
+}
+.el-picker-panel__shortcut {
+  @apply w-24 text-center px-0 mx-auto mb-2.5 rounded-0.5 box-border text-tr-color-text-primary bg-tr-color-bg-button-normal;
+}
+.el-picker-panel__shortcut:hover {
+  @apply text-tr-color-primary-brand-light-default;
+}
+.el-card {
+  @apply text-tr-color-text-primary;
+}
+.el-calendar-table td,
+.el-calendar__header {
+  @apply border-none;
+}
+.el-calendar-table td.is-selected {
+  @apply bg-white;
+}
+.el-calendar-table:not(.is-range) td.next,
+.el-calendar-table:not(.is-range) td.prev,
+.el-calendar-table tr td:first-child,
+.el-calendar-table tr:first-child td {
+  @apply border-none text-tr-color-text-disable;
+}
+.el-calendar-table .el-calendar-day {
+  @apply text-right border-solid border-t border-l-0 border-r-0 border-b-0 border-tr-color-border-divider mr-2;
+}
+.el-calendar-table td:last-child .el-calendar-day {
+  @apply mr-0;
+}
+.el-calendar-table td.is-today .el-calendar-day {
+  @apply bg-tr-color-primary-brand-light-light text-tr-color-text-primary border-t border-tr-color-primary-brand-light-default;
+}
+.el-calendar-table thead th {
+  @apply text-tr-color-text-secondary text-right pr-2 text-sm;
+}
+.el-date-editor .el-range-separator {
+  @apply leading-6;
+}
+.el-range-editor--large {
+  @apply h-10 leading-10;
+}
+.el-range-editor--large .el-range-separator {
+  @apply leading-8;
+}
+.el-range-editor--medium.el-input__inner {
+  @apply h-[2.125rem] leading-[2.125rem];
+}
+.el-range-editor--medium .el-range-separator {
+  @apply leading-[1.625rem];
+}
+.el-range-editor--mini .el-range-separator {
+  @apply leading-5;
+}
+
+
+
+/* 评分rate */
+.el-rate__icon {
+  @apply text-6;
+}
+
+/* 穿梭框transfer */
+.el-checkbox__label span {
+  @apply tr-regular-14px;
+}
+.el-transfer-panel__item.el-checkbox {
+  @apply text-tr-color-text-primary mr-0;
+}
+.el-transfer-panel__item.el-checkbox:hover {
+  @apply bg-tr-color-bg-container-hover;
+}
+.el-transfer-panel .el-transfer-panel__header .el-checkbox .el-checkbox__label {
+  @apply tr-regular-14px text-tr-color-text-primary;
+}
+.el-transfer-panel .el-transfer-panel__header .el-checkbox .el-checkbox__label {
+  @apply font-semibold;
+}
+.el-transfer-panel .el-transfer-panel__header {
+  @apply bg-tr-color-bg-thirdcontainer;
+}
+.el-transfer-panel .el-checkbox__inner{
+  @apply w-4 h-4;
+}
+.el-transfer-panel .el-checkbox__inner::after{
+  @apply left-[5px];
+}
+.el-transfer-panel__item{
+  @apply h-9 leading-9;
+}
+
+.el-transfer-panel__filter .el-input__inner{
+  @apply rounded;
+}
+/* 表单form */
+.el-form-item.is-required:not(.is-no-asterisk)
+  .el-form-item__label-wrap
+  > .el-form-item__label:before,
+.el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before,
+.el-form-item.is-error .el-input__inner,
+.el-form-item.is-error .el-input__inner:focus,
+.el-form-item.is-error .el-textarea__inner,
+.el-form-item.is-error .el-textarea__inner:focus,
+.el-message-box__input input.invalid,
+.el-message-box__input input.invalid:focus,
+.el-form-item__error {
+  @apply text-tr-color-error-default;
+}
+.el-form-item__label {
+  @apply text-tr-color-text-primary;
+}
+.el-form-item.is-error .el-input__inner,
+.el-form-item.is-error .el-input__inner:focus,
+.el-form-item.is-error .el-textarea__inner,
+.el-form-item.is-error .el-textarea__inner:focus,
+.el-message-box__input input.invalid,
+.el-message-box__input input.invalid:focus {
+  @apply shadow-tr-shadows-focus-error;
+}
+
+/* 气泡提示框 */
+.el-popover {
+  min-width: 263px;
+  @apply p-4;
+}
+.el-popconfirm__main,
+.el-popconfirm__action .el-button {
+  @apply tr-regular-14px;
+}
+.el-popconfirm__action .el-button:first-child {
+  @apply bg-tr-color-bg-button-normal text-tr-color-text-primary;
+}
+.el-popconfirm__action .el-button:first-child::after {
+  height: 0;
+}
+.el-popconfirm__action .el-button {
+  padding: 3px 12px;
+}
+.el-popconfirm__main .el-popconfirm__icon {
+  @apply text-6;
+}
+.el-popconfirm__main .el-popconfirm__icon::before{
+  content:'\e7a3'
+}
+.el-popconfirm__main{
+  @apply text-tr-color-text-primary;
+}
+/* 表格table */
+.el-table {
+  @apply text-tr-color-text-primary;
+}
+.el-table .cell {
+  @apply tr-regular-14px;
+}
+.el-table thead {
+  @apply text-tr-color-text-secondary;
+}
+.el-table th.el-table__cell,
+.el-table__body-wrapper tr th.el-table-fixed-column--left,
+.el-table__body-wrapper tr th.el-table-fixed-column--right,
+.el-table__footer-wrapper tr th.el-table-fixed-column--left,
+.el-table__footer-wrapper tr th.el-table-fixed-column--right,
+.el-table__header-wrapper tr th.el-table-fixed-column--left,
+.el-table__header-wrapper tr th.el-table-fixed-column--right {
+  @apply bg-tr-color-table-bg-head;
+}
+.el-table thead.is-group th.el-table__cell {
+  @apply bg-tr-color-table-bg-head border-none shadow-tr-shadows-inner-1-down;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+  @apply bg-tr-color-table-bg-zebra;
+}
+.el-table td.el-table__cell,
+.el-table th.el-table__cell.is-leaf {
+  @apply shadow-tr-shadows-inner-1-down border-none;
+}
+.el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
+  @apply bg-tr-color-table-bg-hover;
+}
+.el-table__body tr.current-row > td.el-table__cell {
+  @apply bg-tr-color-table-bg-selected;
+}
+.el-table__fixed,
+.el-table__fixed-right {
+  box-shadow: 0px 2px 8px 0px #00000026;
+}
+.el-table th.el-table__cell,
+.el-table td.el-table__cell {
+  @apply h-14;
+}
+.el-table.el-table--medium th.el-table__cell,
+.el-table.el-table--medium td.el-table__cell {
+  @apply h-12;
+}
+.el-table.el-table--small th.el-table__cell,
+.el-table.el-table--small td.el-table__cell {
+  @apply h-10 text-sm;
+}
+.el-table .ascending .sort-caret.ascending {
+  @apply border-b-tr-color-info-default;
+}
+.el-table .descending .sort-caret.descending {
+  @apply border-t-tr-color-info-default;
+}
+.el-table th.el-table__cell > .cell.highlight {
+  @apply text-tr-color-text-secondary;
+}
+.el-table .sort-caret.ascending {
+  @apply border-b-tr-color-text-placeholder;
+}
+.el-table .sort-caret.descending {
+  @apply border-t-tr-color-text-placeholder;
+}
+.el-table__column-filter-trigger {
+  @apply inline-flex flex-col items-center h-8 w-6 align-middle relative;
+}
+.caret-wrapper + .el-table__column-filter-trigger {
+  @apply w-2;
+}
+.el-table__column-filter-trigger i {
+  @apply text-tr-color-text-placeholder absolute top-1.5;
+}
+.el-table
+  th.el-table__cell
+  > .cell.highlight
+  .el-table__column-filter-trigger
+  .el-icon-arrow-down {
+  @apply text-tr-color-info-default;
+}
+.el-table
+  th.el-table__cell
+  > .cell
+  .el-table__column-filter-trigger
+  .el-icon-arrow-down::before {
+  @apply text-[19px];
+  content: '\e695';
+  font-family: 'iconfont' !important;
+}
+.el-table-filter__bottom button:hover {
+  @apply text-tr-color-primary-brand-light-default;
+}
+
+/* 警告提示 */
+.el-alert {
+  @apply rounded-tr-radius-s px-3;
+}
+.el-alert__title {
+  @apply tr-regular-14px text-tr-color-text-primary;
+}
+.el-alert__title.is-bold {
+  @apply tr-bold-14px;
+}
+.el-alert--success.is-light .el-alert__description,
+.el-alert--info.is-light .el-alert__description,
+.el-alert--warning.is-light .el-alert__description,
+.el-alert--error.is-light .el-alert__description {
+  @apply text-tr-color-text-secondary tr-regular-14px mt-1 mb-1;
+}
+.el-alert.is-light .el-alert__closebtn {
+  @apply text-tr-color-text-primary;
+}
+.el-alert--success.is-light {
+  @apply bg-tr-color-success-light;
+}
+.el-alert--info.is-light {
+  @apply bg-tr-color-info-light;
+}
+.el-alert--warning.is-light {
+  @apply bg-tr-color-warning-light;
+}
+.el-alert--error.is-light {
+  @apply bg-tr-color-error-light;
+}
+.el-alert__content{
+  @apply pl-0;
+}
+/* 消息通知 */
+.el-notification {
+  @apply rounded-tr-radius-m pt-5 pb-5;
+}
+.el-notification__title {
+  @apply tr-bold-16px text-tr-color-text-primary;
+}
+.el-notification__content {
+  @apply tr-regular-14px text-tr-color-text-secondary;
+}
+/* 标签tag */
+.el-tag {
+  @apply tr-regular-14px px-2 h-6 leading-6 bg-tr-color-info-light text-tr-color-info-default border-tr-color-info-disable;
+}
+.el-tag.el-tag--success {
+  @apply text-tr-color-success-default bg-tr-color-success-light border-tr-color-success-disable;
+}
+.el-tag.el-tag--info {
+  @apply text-tr-color-text-primary bg-tr-color-bg-fourthcontainer border-tr-color-border-container-light;
+}
+.el-tag.el-tag--warning {
+  @apply text-tr-color-warning-default bg-tr-color-warning-light border-tr-color-warning-disable;
+}
+.el-tag.el-tag--danger {
+  @apply text-tr-color-error-default bg-tr-color-error-light border-tr-color-error-disable;
+}
+.el-tag--plain,
+.el-tag--plain.el-tag--success,
+.el-tag--plain.el-tag--info,
+.el-tag--plain.el-tag--warning,
+.el-tag--plain.el-tag--danger {
+  @apply bg-tr-color-bg-container;
+}
+.el-tag--large {
+  @apply h-8 leading-[1.875rem];
+}
+.el-tag--medium {
+  @apply h-7 leading-[1.625rem];
+}
+.el-tag--small {
+  @apply h-[1.625rem] leading-6;
+}
+.el-tag--mini {
+  @apply tr-regular-12px;
+}
+.el-tag--mini {
+  @apply h-5 leading-[1.125rem];
+}
+
+/* 全局提示 */
+.el-message{
+  @apply pt-2 pb-2 min-w-0 border-tr-color-info-default bg-tr-color-info-light rounded-tr-radius-s pl-4 pr-4;
+}
+.el-message--success {
+  @apply border-tr-color-success-default bg-tr-color-success-light;
+}
+.el-message--error{
+  @apply border-tr-color-error-default bg-tr-color-error-light
+}
+.el-message--warning{
+  @apply border-tr-color-warning-default bg-tr-color-warning-light
+}
+.el-message .el-icon-info {
+  @apply text-tr-color-info-default;
+}
+.el-message .el-icon-success {
+  @apply text-tr-color-success-default;
+}
+.el-message .el-icon-error {
+  @apply text-tr-color-error-default;
+}
+.el-message .el-icon-warning {
+  @apply text-tr-color-warning-default;
+}
+.el-message .el-message__content {
+  @apply tr-regular-14px text-tr-color-text-primary mr-2;
+}
+.el-message__closeBtn{
+  @apply text-tr-color-text-secondary
+}
+
+/* 加载loading */
+.el-loading-spinner .path {
+  @apply stroke-current text-tr-color-primary-brand-light-default;
+}
+/* 标签tag */
+.el-tag .el-icon-close {
+  @apply font-semibold;
+}
+/* 模态弹窗dialog */
+.el-dialog {
+  @apply rounded-1;
+}
+.el-dialog__header {
+  @apply pt-3.5 px-4 pb-2.5;
+}
+.el-dialog__headerbtn {
+  @apply text-xl top-3;
+}
+.el-dialog__headerbtn .el-dialog__close {
+  @apply text-tr-color-text-icon1;
+}
+.el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close {
+  @apply text-tr-color-primary-brand-light-default;
+}
+.el-dialog__title {
+  @apply tr-regular-16px text-tr-color-text-primary;
+}
+.el-dialog__title {
+  @apply font-semibold;
+}
+.el-dialog__body {
+  @apply p-4 pt-1;
+}
+.el-dialog__footer {
+  @apply py-4 shadow-tr-shadows-inner-1-up h-14;
+}
+.el-dialog__footer .el-button--default{
+  @apply bg-tr-color-bg-button-normal border-tr-color-bg-button-normal;
+}
+/* 弹框messageBox */
+.el-message-box {
+  @apply pb-0;
+}
+.el-message-box__btns .el-button--default{
+  @apply bg-tr-color-bg-button-normal border-tr-color-bg-button-normal;
+}
+.el-message-box__btns .el-button--primary.el-button--default {
+  @apply text-white bg-tr-color-primary-brand-light-default border-tr-color-primary-brand-light-default;
+}
+.el-message-box__header {
+  @apply pt-5 px-5 pb-1;
+}
+.el-message-box__title {
+  @apply tr-regular-16px text-tr-color-text-primary;
+}
+.el-message-box__title {
+  @apply font-semibold;
+}
+.el-message-box__headerbtn {
+  @apply text-base top-3;
+}
+.el-message-box__headerbtn .el-message-box__close {
+  @apply font-semibold text-tr-color-text-icon1;
+}
+.el-message-box__headerbtn:focus .el-message-box__close,
+.el-message-box__headerbtn:hover .el-message-box__close {
+  @apply text-tr-color-primary-brand-light-default;
+}
+.el-message-box__content {
+  @apply p-5 pt-0;
+}
+.el-message-box__btns {
+  @apply p-5 pt-2.5;
+}
+.el-message-box__message{
+  @apply tr-regular-14px text-tr-color-text-secondary
+}
+
+
+/* 抽屉drawer */
+.el-drawer__header {
+  @apply pt-3.5 px-4 pb-2.5 mb-1 tr-regular-16px text-tr-color-text-icon1;
+}
+.el-drawer__close-btn .el-dialog__close {
+  @apply text-tr-color-text-icon1;
+}
+.el-drawer__body {
+  @apply mx-4 mb-4;
+}
